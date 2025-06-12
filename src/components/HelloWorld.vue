@@ -6,14 +6,14 @@ import { ref, onMounted } from 'vue'
 const info = ref("")
 const allData = ref("")
 const id=ref(1)
-
+/*
 defineProps({
   msg: {
     type: String,
     required: true,
   }
 })
-
+*/
 
 
 function checkData() {
@@ -62,7 +62,10 @@ onMounted(() => {
   <input v-model="id" @change="checkData">
   
    <div>{{ info }}</div>
-  <div>{{  allData }}</div>
+   
+   <div v-for="data in allData.data">
+      {{  data.userId  }}=>{{  data.id }}=>{{  data.title }}
+  </div>
 </template>
 
 <style scoped>
