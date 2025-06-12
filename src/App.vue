@@ -1,6 +1,7 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+//import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue';
+//import TheWelcome from './components/TheWelcome.vue'
 
 </script>
 
@@ -9,12 +10,24 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
+      <p>
+        <strong>Current route path:</strong> {{ $route.fullPath }}
+      </p>
       <HelloWorld msg="You did it yes" />
+      
     </div>
+    
   </header>
-
+  <nav>
+    <RouterLink to="/hello">Go to Hello</RouterLink>
+    <RouterLink to="/">Go to Home</RouterLink>
+    <RouterLink to="/about">Go to About</RouterLink>
+    <RouterLink to="/welcome">Welcome</RouterLink>
+    <RouterLink to="/welcome_item">WelcomeItem</RouterLink>
+  </nav>
   <main>
-    <TheWelcome />
+    
+    <RouterView />
   </main>
 </template>
 

@@ -4,6 +4,7 @@ import axios from 'axios'
 import { ref, onMounted } from 'vue'
 
 const info = ref("")
+const allData = ref("")
 const id=ref(1)
 
 defineProps({
@@ -24,6 +25,15 @@ function checkData() {
         })
     }
 
+    function getAll() {
+    axios
+        .get('https://jsonplaceholder.typicode.com/posts')
+        .then(response => {
+          allData.value = response
+          console.log(response)
+        })
+    }
+
 
 onMounted(() => {
   console.log(`The initial count is ${info.value}.`)
@@ -38,6 +48,7 @@ onMounted(() => {
 </script>
 
 <template>
+
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
@@ -45,10 +56,13 @@ onMounted(() => {
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
+    
   </div>
-  <button @click="checkData">Check</button>
+  <button @click="getAll">Lire tout</button>
   <input v-model="id" @change="checkData">
-  <div>Info : {{  info  }}</div>
+  
+   <div>{{ info }}</div>
+  <div>{{  allData }}</div>
 </template>
 
 <style scoped>
