@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Head from './components/HeadView.vue'
 //import HelloWorld from './components/HelloWorld.vue';
 //import TheWelcome from './components/TheWelcome.vue'
 
@@ -13,7 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <p>
         <strong>Current route path:</strong> {{ $route.fullPath }}
       </p>
-      <HelloWorld  />
+      
       
     </div>
     
@@ -26,7 +26,9 @@ import HelloWorld from './components/HelloWorld.vue'
     <RouterLink to="/welcome_item">WelcomeItem</RouterLink>
   </nav>
   <main>
-    
+    //Ici sera affiché un élément commun à toutes les pages
+    <Head />
+    //Ici sera affiché les différentes pages du routing
     <RouterView />
   </main>
 </template>
