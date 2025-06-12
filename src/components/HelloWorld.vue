@@ -50,7 +50,7 @@ onMounted(() => {
 <template>
 
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green"></h1>
     <h3>
       Vous avez créer un projet avec 
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +

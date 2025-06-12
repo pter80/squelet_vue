@@ -1,5 +1,5 @@
 <script setup>
-//import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue'
 //import HelloWorld from './components/HelloWorld.vue';
 //import TheWelcome from './components/TheWelcome.vue'
 
@@ -13,7 +13,7 @@
       <p>
         <strong>Current route path:</strong> {{ $route.fullPath }}
       </p>
-      <HelloWorld msg="You did it yes" />
+      <HelloWorld  />
       
     </div>
     
