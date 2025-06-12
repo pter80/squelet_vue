@@ -1,7 +1,6 @@
 <script setup>
+
 import Head from './components/HeadView.vue'
-//import HelloWorld from './components/HelloWorld.vue';
-//import TheWelcome from './components/TheWelcome.vue'
 
 </script>
 
@@ -10,9 +9,8 @@ import Head from './components/HeadView.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <p>
-        <strong>Current route path:</strong> {{ $route.fullPath }}
-      </p>
+        <h2 style="font-style: oblique">Current route path: {{ $route.fullPath }}</h2>
+
       
       
     </div>
@@ -26,9 +24,9 @@ import Head from './components/HeadView.vue'
     <RouterLink to="/welcome_item">WelcomeItem</RouterLink>
   </nav>
   <main>
-    //Ici sera affiché un élément commun à toutes les pages
+    <!-- Ici sera affiché un élément commun à toutes les pages -->
     <Head />
-    //Ici sera affiché les différentes pages du routing
+    <!-- Ici sera affiché les différentes pages du routing -->
     <RouterView />
   </main>
 </template>
